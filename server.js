@@ -39,6 +39,6 @@ app.put('/image', (req,res) => {image.handleImage(req, res, postgresDB)})
 app.post('/imageurl', (req,res) => {image.handleApiCall(req, res)})
 
 //app wait for a request from port 3000
-app.listen(3000, () => {
-	console.log('app is running in port 3000');
+app.listen(process.env.PORT || 3000, () => {
+	console.log('app is running in port ${process.env.PORT}');
 })
