@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //the route of the app
-app.get('/', (req,res) => { res.send('it working !'))
+app.get('/', (req,res) => { res.send('it working !')})
 
 app.get('/profile/:id', (req,res) => {profile.handleProfileGet(req, res, postgresDB)})
 
