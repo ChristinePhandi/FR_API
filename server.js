@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //the route of the app
-app.get('/', (req,res) => { res.send('it working !')})
+app.get('/', (req,res) => { res.send('it is working !')})
 
 app.get('/profile/:id', (req,res) => {profile.handleProfileGet(req, res, postgresDB)})
 
@@ -40,5 +40,5 @@ app.post('/imageurl', (req,res) => {image.handleApiCall(req, res)})
 
 //app wait for a request from port 3000
 app.listen(process.env.PORT || 3000, () => {
-	console.log(`app is running in port ${process.env.PORT}``);
+	console.log(`app is running in port ${process.env.PORT}`);
 })
