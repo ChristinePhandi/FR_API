@@ -31,4 +31,4 @@ const handleRegister = (req, res, postgresDB, bcrypt) => {
 
 module.exports = {
 	handleRegister: handleRegister
-}
+};
